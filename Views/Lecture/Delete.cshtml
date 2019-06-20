@@ -1,0 +1,136 @@
+﻿@model ITClassWeb.Models.Lecture
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Lecture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MemberName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.MemberName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TutorIntroduce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TutorIntroduce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureIntroduce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureIntroduce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturePeople)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturePeople)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturePlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturePlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureMaxperson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureMaxperson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureApplyDeadline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureApplyDeadline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturePlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturePlace)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

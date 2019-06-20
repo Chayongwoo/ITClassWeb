@@ -1,0 +1,50 @@
+﻿@model ITClassWeb.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Lecture.LectureTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lecture.LectureTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewGrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewGrade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemberID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

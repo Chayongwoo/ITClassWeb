@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ITClassWeb.Models.ApplySchedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Application.ApplicationLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplyDayofweek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplyScheduleTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Application.ApplicationLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplyDayofweek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplyScheduleTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ApplyScheduleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ApplyScheduleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ApplyScheduleID })
+        </td>
+    </tr>
+}
+
+</table>
