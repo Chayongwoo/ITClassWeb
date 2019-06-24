@@ -52,6 +52,7 @@
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -61,6 +62,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -147,6 +149,310 @@
     <Compile Include="Migrations\201906200032510_Database.Designer.cs">
       <DependentUpon>201906200032510_Database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906200529556_MemberNameAnnotation.cs" />
+    <Compile Include="Migrations\201906200529556_MemberNameAnnotation.Designer.cs">
+      <DependentUpon>201906200529556_MemberNameAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200536587_annotation.cs" />
+    <Compile Include="Migrations\201906200536587_annotation.Designer.cs">
+      <DependentUpon>201906200536587_annotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200600427_EmailAnnotation.cs" />
+    <Compile Include="Migrations\201906200600427_EmailAnnotation.Designer.cs">
+      <DependentUpon>201906200600427_EmailAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200613025_EmailAnnotation2.cs" />
+    <Compile Include="Migrations\201906200613025_EmailAnnotation2.Designer.cs">
+      <DependentUpon>201906200613025_EmailAnnotation2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200615197_EmailAnnotation3.cs" />
+    <Compile Include="Migrations\201906200615197_EmailAnnotation3.Designer.cs">
+      <DependentUpon>201906200615197_EmailAnnotation3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200623013_EmailAnnotation4.cs" />
+    <Compile Include="Migrations\201906200623013_EmailAnnotation4.Designer.cs">
+      <DependentUpon>201906200623013_EmailAnnotation4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200623471_EmailAnnotation5.cs" />
+    <Compile Include="Migrations\201906200623471_EmailAnnotation5.Designer.cs">
+      <DependentUpon>201906200623471_EmailAnnotation5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200625008_EmailAnnotation6.cs" />
+    <Compile Include="Migrations\201906200625008_EmailAnnotation6.Designer.cs">
+      <DependentUpon>201906200625008_EmailAnnotation6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200650345_password.cs" />
+    <Compile Include="Migrations\201906200650345_password.Designer.cs">
+      <DependentUpon>201906200650345_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200652049_password2.cs" />
+    <Compile Include="Migrations\201906200652049_password2.Designer.cs">
+      <DependentUpon>201906200652049_password2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200703411_password3.cs" />
+    <Compile Include="Migrations\201906200703411_password3.Designer.cs">
+      <DependentUpon>201906200703411_password3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200722058_email.cs" />
+    <Compile Include="Migrations\201906200722058_email.Designer.cs">
+      <DependentUpon>201906200722058_email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200738134_member.cs" />
+    <Compile Include="Migrations\201906200738134_member.Designer.cs">
+      <DependentUpon>201906200738134_member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200739151_member1.cs" />
+    <Compile Include="Migrations\201906200739151_member1.Designer.cs">
+      <DependentUpon>201906200739151_member1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200746562_member2.cs" />
+    <Compile Include="Migrations\201906200746562_member2.Designer.cs">
+      <DependentUpon>201906200746562_member2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200825386_License.cs" />
+    <Compile Include="Migrations\201906200825386_License.Designer.cs">
+      <DependentUpon>201906200825386_License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200827540_License1.cs" />
+    <Compile Include="Migrations\201906200827540_License1.Designer.cs">
+      <DependentUpon>201906200827540_License1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200829353_License2.cs" />
+    <Compile Include="Migrations\201906200829353_License2.Designer.cs">
+      <DependentUpon>201906200829353_License2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200830500_License3.cs" />
+    <Compile Include="Migrations\201906200830500_License3.Designer.cs">
+      <DependentUpon>201906200830500_License3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200835343_License4.cs" />
+    <Compile Include="Migrations\201906200835343_License4.Designer.cs">
+      <DependentUpon>201906200835343_License4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200911270_License5.cs" />
+    <Compile Include="Migrations\201906200911270_License5.Designer.cs">
+      <DependentUpon>201906200911270_License5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906200913208_License6.cs" />
+    <Compile Include="Migrations\201906200913208_License6.Designer.cs">
+      <DependentUpon>201906200913208_License6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201009337_License7.cs" />
+    <Compile Include="Migrations\201906201009337_License7.Designer.cs">
+      <DependentUpon>201906201009337_License7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201043218_License8.cs" />
+    <Compile Include="Migrations\201906201043218_License8.Designer.cs">
+      <DependentUpon>201906201043218_License8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201045134_License9.cs" />
+    <Compile Include="Migrations\201906201045134_License9.Designer.cs">
+      <DependentUpon>201906201045134_License9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201046130_License10.cs" />
+    <Compile Include="Migrations\201906201046130_License10.Designer.cs">
+      <DependentUpon>201906201046130_License10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201047249_License11.cs" />
+    <Compile Include="Migrations\201906201047249_License11.Designer.cs">
+      <DependentUpon>201906201047249_License11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201058100_License12.cs" />
+    <Compile Include="Migrations\201906201058100_License12.Designer.cs">
+      <DependentUpon>201906201058100_License12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201059564_License13.cs" />
+    <Compile Include="Migrations\201906201059564_License13.Designer.cs">
+      <DependentUpon>201906201059564_License13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201126434_Review.cs" />
+    <Compile Include="Migrations\201906201126434_Review.Designer.cs">
+      <DependentUpon>201906201126434_Review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201205009_Lecture.cs" />
+    <Compile Include="Migrations\201906201205009_Lecture.Designer.cs">
+      <DependentUpon>201906201205009_Lecture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201209005_Lecture1.cs" />
+    <Compile Include="Migrations\201906201209005_Lecture1.Designer.cs">
+      <DependentUpon>201906201209005_Lecture1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201213132_Lecture2.cs" />
+    <Compile Include="Migrations\201906201213132_Lecture2.Designer.cs">
+      <DependentUpon>201906201213132_Lecture2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201214432_Lecture3.cs" />
+    <Compile Include="Migrations\201906201214432_Lecture3.Designer.cs">
+      <DependentUpon>201906201214432_Lecture3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210018261_connectStrings.cs" />
+    <Compile Include="Migrations\201906210018261_connectStrings.Designer.cs">
+      <DependentUpon>201906210018261_connectStrings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210037228_add.cs" />
+    <Compile Include="Migrations\201906210037228_add.Designer.cs">
+      <DependentUpon>201906210037228_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210044312_add1.cs" />
+    <Compile Include="Migrations\201906210044312_add1.Designer.cs">
+      <DependentUpon>201906210044312_add1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210045191_add2.cs" />
+    <Compile Include="Migrations\201906210045191_add2.Designer.cs">
+      <DependentUpon>201906210045191_add2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210047053_add3.cs" />
+    <Compile Include="Migrations\201906210047053_add3.Designer.cs">
+      <DependentUpon>201906210047053_add3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210049469_add4.cs" />
+    <Compile Include="Migrations\201906210049469_add4.Designer.cs">
+      <DependentUpon>201906210049469_add4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210058479_add5.cs" />
+    <Compile Include="Migrations\201906210058479_add5.Designer.cs">
+      <DependentUpon>201906210058479_add5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210101268_add6.cs" />
+    <Compile Include="Migrations\201906210101268_add6.Designer.cs">
+      <DependentUpon>201906210101268_add6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210109296_add7.cs" />
+    <Compile Include="Migrations\201906210109296_add7.Designer.cs">
+      <DependentUpon>201906210109296_add7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210111250_add8.cs" />
+    <Compile Include="Migrations\201906210111250_add8.Designer.cs">
+      <DependentUpon>201906210111250_add8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210114290_add9.cs" />
+    <Compile Include="Migrations\201906210114290_add9.Designer.cs">
+      <DependentUpon>201906210114290_add9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210123347_add10.cs" />
+    <Compile Include="Migrations\201906210123347_add10.Designer.cs">
+      <DependentUpon>201906210123347_add10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210243566_add11.cs" />
+    <Compile Include="Migrations\201906210243566_add11.Designer.cs">
+      <DependentUpon>201906210243566_add11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210319397_add12.cs" />
+    <Compile Include="Migrations\201906210319397_add12.Designer.cs">
+      <DependentUpon>201906210319397_add12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210320548_add13.cs" />
+    <Compile Include="Migrations\201906210320548_add13.Designer.cs">
+      <DependentUpon>201906210320548_add13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210323109_add14.cs" />
+    <Compile Include="Migrations\201906210323109_add14.Designer.cs">
+      <DependentUpon>201906210323109_add14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210324511_add15.cs" />
+    <Compile Include="Migrations\201906210324511_add15.Designer.cs">
+      <DependentUpon>201906210324511_add15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210846508_add16.cs" />
+    <Compile Include="Migrations\201906210846508_add16.Designer.cs">
+      <DependentUpon>201906210846508_add16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210923362_add17.cs" />
+    <Compile Include="Migrations\201906210923362_add17.Designer.cs">
+      <DependentUpon>201906210923362_add17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906211021125_add18.cs" />
+    <Compile Include="Migrations\201906211021125_add18.Designer.cs">
+      <DependentUpon>201906211021125_add18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906211050122_add19.cs" />
+    <Compile Include="Migrations\201906211050122_add19.Designer.cs">
+      <DependentUpon>201906211050122_add19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906211051181_add20.cs" />
+    <Compile Include="Migrations\201906211051181_add20.Designer.cs">
+      <DependentUpon>201906211051181_add20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906211052249_add21.cs" />
+    <Compile Include="Migrations\201906211052249_add21.Designer.cs">
+      <DependentUpon>201906211052249_add21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906211056428_add22.cs" />
+    <Compile Include="Migrations\201906211056428_add22.Designer.cs">
+      <DependentUpon>201906211056428_add22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906220601377_add23.cs" />
+    <Compile Include="Migrations\201906220601377_add23.Designer.cs">
+      <DependentUpon>201906220601377_add23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906220602520_add24.cs" />
+    <Compile Include="Migrations\201906220602520_add24.Designer.cs">
+      <DependentUpon>201906220602520_add24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906220626526_add25.cs" />
+    <Compile Include="Migrations\201906220626526_add25.Designer.cs">
+      <DependentUpon>201906220626526_add25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906220724324_add26.cs" />
+    <Compile Include="Migrations\201906220724324_add26.Designer.cs">
+      <DependentUpon>201906220724324_add26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906220813006_add27.cs" />
+    <Compile Include="Migrations\201906220813006_add27.Designer.cs">
+      <DependentUpon>201906220813006_add27.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906220846398_add28.cs" />
+    <Compile Include="Migrations\201906220846398_add28.Designer.cs">
+      <DependentUpon>201906220846398_add28.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240025477_add29.cs" />
+    <Compile Include="Migrations\201906240025477_add29.Designer.cs">
+      <DependentUpon>201906240025477_add29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240038025_add30.cs" />
+    <Compile Include="Migrations\201906240038025_add30.Designer.cs">
+      <DependentUpon>201906240038025_add30.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240044572_add31.cs" />
+    <Compile Include="Migrations\201906240044572_add31.Designer.cs">
+      <DependentUpon>201906240044572_add31.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240055367_add32.cs" />
+    <Compile Include="Migrations\201906240055367_add32.Designer.cs">
+      <DependentUpon>201906240055367_add32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240058054_add33.cs" />
+    <Compile Include="Migrations\201906240058054_add33.Designer.cs">
+      <DependentUpon>201906240058054_add33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240124093_add34.cs" />
+    <Compile Include="Migrations\201906240124093_add34.Designer.cs">
+      <DependentUpon>201906240124093_add34.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240240439_add35.cs" />
+    <Compile Include="Migrations\201906240240439_add35.Designer.cs">
+      <DependentUpon>201906240240439_add35.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240250188_add36.cs" />
+    <Compile Include="Migrations\201906240250188_add36.Designer.cs">
+      <DependentUpon>201906240250188_add36.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240256442_add37.cs" />
+    <Compile Include="Migrations\201906240256442_add37.Designer.cs">
+      <DependentUpon>201906240256442_add37.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240330405_add38.cs" />
+    <Compile Include="Migrations\201906240330405_add38.Designer.cs">
+      <DependentUpon>201906240330405_add38.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240335048_add39.cs" />
+    <Compile Include="Migrations\201906240335048_add39.Designer.cs">
+      <DependentUpon>201906240335048_add39.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240512317_add40.cs" />
+    <Compile Include="Migrations\201906240512317_add40.Designer.cs">
+      <DependentUpon>201906240512317_add40.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Application.cs" />
     <Compile Include="Models\ApplySchedule.cs" />
@@ -228,9 +534,15 @@
     <Content Include="Views\ApplySchedule\Details.cshtml" />
     <Content Include="Views\ApplySchedule\Edit.cshtml" />
     <Content Include="Views\ApplySchedule\Index.cshtml" />
+    <Content Include="Views\Member\SignIn.cshtml" />
+    <Content Include="Views\Member\FindPassword.cshtml" />
+    <Content Include="Views\Member\Verify.cshtml" />
+    <Content Include="Views\Member\NewPasswordView.cshtml" />
+    <Content Include="Views\Member\TutorRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -251,6 +563,234 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906200032510_Database.resx">
       <DependentUpon>201906200032510_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200529556_MemberNameAnnotation.resx">
+      <DependentUpon>201906200529556_MemberNameAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200536587_annotation.resx">
+      <DependentUpon>201906200536587_annotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200600427_EmailAnnotation.resx">
+      <DependentUpon>201906200600427_EmailAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200613025_EmailAnnotation2.resx">
+      <DependentUpon>201906200613025_EmailAnnotation2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200615197_EmailAnnotation3.resx">
+      <DependentUpon>201906200615197_EmailAnnotation3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200623013_EmailAnnotation4.resx">
+      <DependentUpon>201906200623013_EmailAnnotation4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200623471_EmailAnnotation5.resx">
+      <DependentUpon>201906200623471_EmailAnnotation5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200625008_EmailAnnotation6.resx">
+      <DependentUpon>201906200625008_EmailAnnotation6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200650345_password.resx">
+      <DependentUpon>201906200650345_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200652049_password2.resx">
+      <DependentUpon>201906200652049_password2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200703411_password3.resx">
+      <DependentUpon>201906200703411_password3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200722058_email.resx">
+      <DependentUpon>201906200722058_email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200738134_member.resx">
+      <DependentUpon>201906200738134_member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200739151_member1.resx">
+      <DependentUpon>201906200739151_member1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200746562_member2.resx">
+      <DependentUpon>201906200746562_member2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200825386_License.resx">
+      <DependentUpon>201906200825386_License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200827540_License1.resx">
+      <DependentUpon>201906200827540_License1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200829353_License2.resx">
+      <DependentUpon>201906200829353_License2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200830500_License3.resx">
+      <DependentUpon>201906200830500_License3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200835343_License4.resx">
+      <DependentUpon>201906200835343_License4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200911270_License5.resx">
+      <DependentUpon>201906200911270_License5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906200913208_License6.resx">
+      <DependentUpon>201906200913208_License6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201009337_License7.resx">
+      <DependentUpon>201906201009337_License7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201043218_License8.resx">
+      <DependentUpon>201906201043218_License8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201045134_License9.resx">
+      <DependentUpon>201906201045134_License9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201046130_License10.resx">
+      <DependentUpon>201906201046130_License10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201047249_License11.resx">
+      <DependentUpon>201906201047249_License11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201058100_License12.resx">
+      <DependentUpon>201906201058100_License12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201059564_License13.resx">
+      <DependentUpon>201906201059564_License13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201126434_Review.resx">
+      <DependentUpon>201906201126434_Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201205009_Lecture.resx">
+      <DependentUpon>201906201205009_Lecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201209005_Lecture1.resx">
+      <DependentUpon>201906201209005_Lecture1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201213132_Lecture2.resx">
+      <DependentUpon>201906201213132_Lecture2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201214432_Lecture3.resx">
+      <DependentUpon>201906201214432_Lecture3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210018261_connectStrings.resx">
+      <DependentUpon>201906210018261_connectStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210037228_add.resx">
+      <DependentUpon>201906210037228_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210044312_add1.resx">
+      <DependentUpon>201906210044312_add1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210045191_add2.resx">
+      <DependentUpon>201906210045191_add2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210047053_add3.resx">
+      <DependentUpon>201906210047053_add3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210049469_add4.resx">
+      <DependentUpon>201906210049469_add4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210058479_add5.resx">
+      <DependentUpon>201906210058479_add5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210101268_add6.resx">
+      <DependentUpon>201906210101268_add6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210109296_add7.resx">
+      <DependentUpon>201906210109296_add7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210111250_add8.resx">
+      <DependentUpon>201906210111250_add8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210114290_add9.resx">
+      <DependentUpon>201906210114290_add9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210123347_add10.resx">
+      <DependentUpon>201906210123347_add10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210243566_add11.resx">
+      <DependentUpon>201906210243566_add11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210319397_add12.resx">
+      <DependentUpon>201906210319397_add12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210320548_add13.resx">
+      <DependentUpon>201906210320548_add13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210323109_add14.resx">
+      <DependentUpon>201906210323109_add14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210324511_add15.resx">
+      <DependentUpon>201906210324511_add15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210846508_add16.resx">
+      <DependentUpon>201906210846508_add16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210923362_add17.resx">
+      <DependentUpon>201906210923362_add17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906211021125_add18.resx">
+      <DependentUpon>201906211021125_add18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906211050122_add19.resx">
+      <DependentUpon>201906211050122_add19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906211051181_add20.resx">
+      <DependentUpon>201906211051181_add20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906211052249_add21.resx">
+      <DependentUpon>201906211052249_add21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906211056428_add22.resx">
+      <DependentUpon>201906211056428_add22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906220601377_add23.resx">
+      <DependentUpon>201906220601377_add23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906220602520_add24.resx">
+      <DependentUpon>201906220602520_add24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906220626526_add25.resx">
+      <DependentUpon>201906220626526_add25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906220724324_add26.resx">
+      <DependentUpon>201906220724324_add26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906220813006_add27.resx">
+      <DependentUpon>201906220813006_add27.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906220846398_add28.resx">
+      <DependentUpon>201906220846398_add28.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240025477_add29.resx">
+      <DependentUpon>201906240025477_add29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240038025_add30.resx">
+      <DependentUpon>201906240038025_add30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240044572_add31.resx">
+      <DependentUpon>201906240044572_add31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240055367_add32.resx">
+      <DependentUpon>201906240055367_add32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240058054_add33.resx">
+      <DependentUpon>201906240058054_add33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240124093_add34.resx">
+      <DependentUpon>201906240124093_add34.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240240439_add35.resx">
+      <DependentUpon>201906240240439_add35.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240250188_add36.resx">
+      <DependentUpon>201906240250188_add36.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240256442_add37.resx">
+      <DependentUpon>201906240256442_add37.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240330405_add38.resx">
+      <DependentUpon>201906240330405_add38.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240335048_add39.resx">
+      <DependentUpon>201906240335048_add39.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240512317_add40.resx">
+      <DependentUpon>201906240512317_add40.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

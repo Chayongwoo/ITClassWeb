@@ -12,7 +12,7 @@ namespace ITClassWeb.DAL
         {
             var members = new List<Member>
             {
-                new Member{MemberEmail="abcd",MemberName="abc",MemberPassword="1234",MemberPhone="1234",MemberType="abc"}
+                new Member{MemberEmail="abcd",MemberName="abc",MemberPassword="1234" ,MemberPhone="1234"}
             };
 
             members.ForEach(s => context.Members.Add(s));

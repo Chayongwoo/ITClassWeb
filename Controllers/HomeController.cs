@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ITClassWeb.DAL;
+using ITClassWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,5 +28,6 @@ namespace ITClassWeb.Controllers
 
             return View();
         }
+
     }
 }

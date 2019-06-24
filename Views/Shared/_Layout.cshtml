@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Learn Programming Language!</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -19,21 +19,37 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav ar-auto">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Members", "Index", "Member")</li>
-                    <li>@Html.ActionLink("Licenses", "Index", "License")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Session["MemberID"] == null)
+                    {
+                        <li>@Html.ActionLink("Sign up", "Create", "Member", new { }, new { @class = "navbar-brand" })</li>
+                        <li>@Html.ActionLink("Sign in", "SignIn", "Member", new { }, new { @class = "navbar-brand" })</li>
+                    }
+
+                    else
+                    {
+                        <li>@Html.ActionLink((string)(Session["MemberEmail"]), "Edit", "Member", new { }, new { @class = "navbar-brand" })</li>
+                        <li>@Html.ActionLink("Sign out", "SignOut", "Member", new { }, new { @class = "navbar-brand" })</li>
+                    }
+                    @if ((string)(Session["MemberType"])==("일반"))
+                    {
+                        <li>@Html.ActionLink("Register as Tutor", "TutorRegister", "Member", new { id = Session["MemberID"] }, new { @class = "navbar-brand" })</li>
+                    }
                 </ul>
             </div>
+
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - ITTaling</p>
         </footer>
     </div>
 
