@@ -23,6 +23,15 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Members", "Index", "Member")</li>
+                    <li>@Html.ActionLink("Lectures", "Index", "Lecture")</li>
+                    <li>@Html.ActionLink("C", "LectureBoardList", "Lecture", new { LectureLanguage = "C" }, null)</li>
+                    <li>@Html.ActionLink("C++", "LectureBoardList", "Lecture", new { LectureLanguage = "C++" }, null)</li>
+                    <li>@Html.ActionLink("C#", "LectureBoardList", "Lecture", new { LectureLanguage = "C#" }, null)</li>
+                    <li>@Html.ActionLink("JAVA", "LectureBoardList", "Lecture", new { LectureLanguage = "JAVA" }, null)</li>
+                    <li>@Html.ActionLink("HTML", "LectureBoardList", "Lecture", new { LectureLanguage = "HTML" }, null)</li>
+                    <li>@Html.ActionLink("CSS", "LectureBoardList", "Lecture", new { LectureLanguage = "CSS" }, null)</li>
+                    <li>@Html.ActionLink("JAVASCRIPT", "LectureBoardList", "Lecture", new { lectureLanguage = "JAVASCRIPT" }, null)</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (Session["MemberID"] == null)
@@ -36,13 +45,12 @@
                         <li>@Html.ActionLink((string)(Session["MemberEmail"]), "Edit", "Member", new { }, new { @class = "navbar-brand" })</li>
                         <li>@Html.ActionLink("Sign out", "SignOut", "Member", new { }, new { @class = "navbar-brand" })</li>
                     }
-                    @if ((string)(Session["MemberType"])==("일반"))
+                    @if ((string)(Session["MemberType"]) == ("일반"))
                     {
                         <li>@Html.ActionLink("Register as Tutor", "TutorRegister", "Member", new { id = Session["MemberID"] }, new { @class = "navbar-brand" })</li>
                     }
                 </ul>
             </div>
-
         </div>
     </div>
     <div class="container body-content">

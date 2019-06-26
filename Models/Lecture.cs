@@ -17,9 +17,12 @@ namespace ITClassWeb.Models
         [Required(ErrorMessage = "가르칠 프로그래밍 언어를 골라야 합니다.")]
         public string LectureLanguage { get; set; }
 
-        [Display(Name = "강의 이미지")]
-        [Required(ErrorMessage = "강의 이미지를 업로드해야 합니다.")]
-        public string LectureImage { get; set; }
+        public byte[] LectureImage { get; set; }
+
+        [Display(Name ="강의 이미지")]
+        public string LectureImageName { get; set; }
+
+        public string LectureImageType { get; set; }
 
         [Display(Name = "튜터 소개")]
         [Required(ErrorMessage = "튜터 소개를 입력해야 합니다.")]
@@ -55,9 +58,9 @@ namespace ITClassWeb.Models
 
         [Display(Name = "강의 신청 마감일")]
         [Required]
-        [DataType(DataType.DateTime, ErrorMessage = "올바른 연-월-일 형식이어야 합니다.")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [RegularExpression(@"^(19|20)[\d]{2}-(0[1-9]{1}|1[012]{1})-(0[1-9]{1}|[12]{1}[0-9]{1}|3[01]{1})$", ErrorMessage = "올바른 연-월-일 형식이어야 합니다.")]
+        [DataType(DataType.Date, ErrorMessage = "올바른 연-월-일 형식이어야 합니다.")]
+      //  [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+       // [RegularExpression(@"^(19|20)[\d]{2}-(0[1-9]{1}|1[012]{1})-(0[1-9]{1}|[12]{1}[0-9]{1}|3[01]{1})$", ErrorMessage = "올바른 연-월-일 형식이어야 합니다.")]
         public DateTime LectureApplyDeadline { get; set; }
 
         [Display(Name = "강의 위치")]
@@ -68,12 +71,14 @@ namespace ITClassWeb.Models
         [Required(ErrorMessage = "강의 장소를 입력해야 합니다.")]
         public string LecturePlace { get; set; }
 
+        [Display(Name = "강의 시간")]
+        [Required(ErrorMessage = "강의 시간를 입력해야 합니다.")]
+        public string ScheduleTime { get; set; }
 
         public int MemberID { get; set; }
 
         public virtual ICollection<Application> Application { get; set; }
         public virtual Member Member { get; set; }
         public virtual ICollection<Review> Review { get; set; }
-        public virtual ICollection<Schedule> Schedule { get; set; }
     }
 }

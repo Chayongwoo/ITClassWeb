@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Windows;
 using ITClassWeb.DAL;
 using ITClassWeb.Models;
 
@@ -40,27 +41,80 @@ namespace ITClassWeb.Controllers
         // GET: Lecture/Create
         public ActionResult Create()
         {
-            ViewBag.MemberID = new SelectList(db.Members, "MemberID", "MemberName");
-            return View();
+            if(Session["MemberID"] != null)
+            {
+                ViewBag.MemberID = (int)Session["MemberID"];
+                return View("Create");
+            }
+            else
+            {
+            MessageBox.Show("로그인을 하셔야 작성하실 수 있습니다.");
+            return RedirectToAction("Index");
+
+            }
+           // ViewBag.MemberID = new SelectList(db.Members, "MemberID", "MemberName");
         }
+
+        public ActionResult LectureBoardList(string lectureLanguage)
+        {
+
+            var lectures = db.Lectures.Where(l => l.LectureLanguage == lectureLanguage);
+
+
+            if (lectures == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(lectures.ToList());
+        }
+
+       
+
+
+
 
         // POST: Lecture/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LectureID,LectureTitle,LectureLanguage,LectureImage,TutorIntroduce,LectureIntroduce,LecturePeople,LecturePlan,LectureCount,LecturePrice,LectureMaxperson,LectureApplyDeadline,LectureLocation,LecturePlace,MemberID")] Lecture lecture)
+        public ActionResult Create([Bind(Include = "LectureID,LectureTitle,LectureLanguage,LectureImage,LectureImageName,LectureImageType,TutorIntroduce,LectureIntroduce,LecturePeople,LecturePlan,LectureCount,LecturePrice,LectureMaxperson,LectureApplyDeadline,LectureLocation,LecturePlace,ScheduleTime,MemberID")] Lecture lecture, HttpPostedFileBase image = null)
         {
+
             if (ModelState.IsValid)
             {
+
+                if (image != null)
+                {
+                    lecture.LectureImageName = image.FileName; // 파일명
+                    lecture.LectureImageType = image.ContentType;
+                    lecture.LectureImage = new byte[image.ContentLength];
+                    image.InputStream.Read(lecture.LectureImage, 0, image.ContentLength);
+                }
+                
                 db.Lectures.Add(lecture);
                 db.SaveChanges();
+
+                Session["LectureID"] = lecture.LectureID;
+
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MemberID = new SelectList(db.Members, "MemberID", "MemberName", lecture.MemberID);
-            return View(lecture);
+            return View();
         }
+
+        public FileContentResult GetImage(int LectureID)
+        {
+            Lecture lecture = db.Lectures.FirstOrDefault(p => p.LectureID == LectureID);
+            if (lecture != null)
+                return File(lecture.LectureImage, lecture.LectureImageName);
+            else
+                return null;
+        }
+
+
+
 
         // GET: Lecture/Edit/5
         public ActionResult Edit(int? id)

@@ -135,7 +135,6 @@
     <Compile Include="Controllers\LicenseController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
-    <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="DAL\ClassContext.cs" />
     <Compile Include="DAL\ClassInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -453,6 +452,30 @@
     <Compile Include="Migrations\201906240512317_add40.Designer.cs">
       <DependentUpon>201906240512317_add40.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906240646557_asfasf.cs" />
+    <Compile Include="Migrations\201906240646557_asfasf.Designer.cs">
+      <DependentUpon>201906240646557_asfasf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906240650549_dasda.cs" />
+    <Compile Include="Migrations\201906240650549_dasda.Designer.cs">
+      <DependentUpon>201906240650549_dasda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906250237568_asd.cs" />
+    <Compile Include="Migrations\201906250237568_asd.Designer.cs">
+      <DependentUpon>201906250237568_asd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906250320269_asdasd.cs" />
+    <Compile Include="Migrations\201906250320269_asdasd.Designer.cs">
+      <DependentUpon>201906250320269_asdasd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906250454247_sfasfa.cs" />
+    <Compile Include="Migrations\201906250454247_sfasfa.Designer.cs">
+      <DependentUpon>201906250454247_sfasfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906260541445_ggg.cs" />
+    <Compile Include="Migrations\201906260541445_ggg.Designer.cs">
+      <DependentUpon>201906260541445_ggg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Application.cs" />
     <Compile Include="Models\ApplySchedule.cs" />
@@ -460,10 +483,13 @@
     <Compile Include="Models\License.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Review.cs" />
-    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ClassContext.mdf" />
+    <Content Include="App_Data\ClassContext_log.ldf">
+      <DependentUpon>ClassContext.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -519,11 +545,6 @@
     <Content Include="Views\Review\Details.cshtml" />
     <Content Include="Views\Review\Edit.cshtml" />
     <Content Include="Views\Review\Index.cshtml" />
-    <Content Include="Views\Schedule\Create.cshtml" />
-    <Content Include="Views\Schedule\Delete.cshtml" />
-    <Content Include="Views\Schedule\Details.cshtml" />
-    <Content Include="Views\Schedule\Edit.cshtml" />
-    <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\Application\Create.cshtml" />
     <Content Include="Views\Application\Delete.cshtml" />
     <Content Include="Views\Application\Details.cshtml" />
@@ -539,9 +560,12 @@
     <Content Include="Views\Member\Verify.cshtml" />
     <Content Include="Views\Member\NewPasswordView.cshtml" />
     <Content Include="Views\Member\TutorRegister.cshtml" />
+    <Content Include="Views\Lecture\LectureBoardList.cshtml" />
+    <Content Include="Views\Lecture\CreateView.cshtml" />
+    <Content Include="Views\Lecture\View33.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
@@ -791,6 +815,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906240512317_add40.resx">
       <DependentUpon>201906240512317_add40.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240646557_asfasf.resx">
+      <DependentUpon>201906240646557_asfasf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240650549_dasda.resx">
+      <DependentUpon>201906240650549_dasda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906250237568_asd.resx">
+      <DependentUpon>201906250237568_asd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906250320269_asdasd.resx">
+      <DependentUpon>201906250320269_asdasd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906250454247_sfasfa.resx">
+      <DependentUpon>201906250454247_sfasfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906260541445_ggg.resx">
+      <DependentUpon>201906260541445_ggg.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

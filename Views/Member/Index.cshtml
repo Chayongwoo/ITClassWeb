@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.MemberID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.MemberName)
         </th>
         <th>
@@ -27,52 +30,55 @@
             @Html.DisplayNameFor(model => model.MemberType)
         </th>
         <!--
-        <th>
-            @Html.DisplayNameFor(model => model.TutorImage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TutorPortfolio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TutorGit)
-        </th>
-        -->
+    <th>
+        @Html.DisplayNameFor(model => model.TutorImage)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.TutorPortfolio)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.TutorGit)
+    </th>
+    -->
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MemberName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MemberEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MemberPassword)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MemberPhone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MemberType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TutorImage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TutorPortfolio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TutorGit)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.MemberID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.MemberID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.MemberID })
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MemberID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MemberName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MemberEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MemberPassword)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MemberPhone)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MemberType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TutorImage)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TutorPortfolio)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TutorGit)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MemberID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MemberID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MemberID })
+    </td>
+</tr>
     }
 
 </table>
