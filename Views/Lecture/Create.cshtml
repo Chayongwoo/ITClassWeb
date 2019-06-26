@@ -6,133 +6,450 @@
 
 <h2>Create</h2>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "Lecture", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Lecture</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.LectureTitle, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LectureTitle, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LectureTitle, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.LectureLanguage, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LectureLanguage, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LectureLanguage, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LectureImage, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LectureImage, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LectureImage, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TutorIntroduce, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TutorIntroduce, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TutorIntroduce, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LectureIntroduce, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LectureIntroduce, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LectureIntroduce, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LecturePeople, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LecturePeople, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LecturePeople, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LecturePlan, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LecturePlan, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LecturePlan, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LectureCount, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LectureCount, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LectureCount, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LecturePrice, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LecturePrice, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LecturePrice, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LectureMaxperson, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LectureMaxperson, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LectureMaxperson, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LectureApplyDeadline, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LectureApplyDeadline, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LectureApplyDeadline, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LectureLocation, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LectureLocation, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LectureLocation, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LecturePlace, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LecturePlace, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LecturePlace, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.MemberID, "MemberID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("MemberID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.MemberID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+<div class="form-horizontal">
+    <h4>Lecture</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.LectureTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LectureTitle, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LectureTitle, "", new { @class = "text-danger" })
         </div>
     </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.LectureLanguage, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <script type="text/javascript">
+
+                function setValue() {
+
+                    $("input[name=LectureLanguage]").text($("select[name=language]").val());
+
+                    $("input[name=LectureLanguage]").val($("select[name=language]").val());
+                }
+
+/**/</script>
+
+
+            <select name="language" id="language" onchange="setValue();">
+                <option value="" selected>언어선택</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
+                <option value="JAVA">JAVA</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JAVASCRIPT">JAVASCRIPT</option>
+            </select>
+
+            @Html.HiddenFor(model => model.LectureLanguage, new { Id = "LectureLanguage", htmlAttributes = new { @class = "form-control" } })
+
+            @Html.ValidationMessageFor(model => model.LectureLanguage, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LectureImage, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+
+
+            <div style="position:relative;">
+                <a class='btn' href='javascript:;'>
+                    사진 찾기
+                    <input type="file" name="Image" size="40"
+                           style="position:absolute;z-index:2;top:0;
+                                    left:0;filter: alpha(opacity=0); opacity:0;
+                                    background-color:transparent;color:transparent;"
+                           onchange='$("#upload-file-info").html($(this).val());' />
+                </a>
+                <span class='label label-info' id="upload-file-info"></span>
+
+                <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TutorIntroduce, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.TutorIntroduce, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.TutorIntroduce, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LectureIntroduce, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LectureIntroduce, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LectureIntroduce, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LecturePeople, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LecturePeople, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LecturePeople, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LecturePlan, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LecturePlan, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LecturePlan, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LectureCount, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LectureCount, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LectureCount, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LecturePrice, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LecturePrice, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LecturePrice, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LectureMaxperson, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LectureMaxperson, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LectureMaxperson, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LectureApplyDeadline, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LectureApplyDeadline, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LectureApplyDeadline, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LectureLocation, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function () {
+            var area0 = ["시/도 선택", "서울특별시", "인천광역시", "대전광역시", "광주광역시", "대구광역시", "울산광역시", "부산광역시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주도"];
+            var area1 = ["강남구", "강동구", "강북구", "강서구", "관악구", "광진구", "구로구", "금천구", "노원구", "도봉구", "동대문구", "동작구", "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양천구", "영등포구", "용산구", "은평구", "종로구", "중구", "중랑구"];
+            var area2 = ["계양구", "남구", "남동구", "동구", "부평구", "서구", "연수구", "중구", "강화군", "옹진군"];
+            var area3 = ["대덕구", "동구", "서구", "유성구", "중구"];
+            var area4 = ["광산구", "남구", "동구", "북구", "서구"];
+            var area5 = ["남구", "달서구", "동구", "북구", "서구", "수성구", "중구", "달성군"];
+            var area6 = ["남구", "동구", "북구", "중구", "울주군"];
+            var area7 = ["강서구", "금정구", "남구", "동구", "동래구", "부산진구", "북구", "사상구", "사하구", "서구", "수영구", "연제구", "영도구", "중구", "해운대구", "기장군"];
+            var area8 = ["고양시", "과천시", "광명시", "광주시", "구리시", "군포시", "김포시", "남양주시", "동두천시", "부천시", "성남시", "수원시", "시흥시", "안산시", "안성시", "안양시", "양주시", "오산시", "용인시", "의왕시", "의정부시", "이천시", "파주시", "평택시", "포천시", "하남시", "화성시", "가평군", "양평군", "여주군", "연천군"];
+            var area9 = ["강릉시", "동해시", "삼척시", "속초시", "원주시", "춘천시", "태백시", "고성군", "양구군", "양양군", "영월군", "인제군", "정선군", "철원군", "평창군", "홍천군", "화천군", "횡성군"];
+            var area10 = ["제천시", "청주시", "충주시", "괴산군", "단양군", "보은군", "영동군", "옥천군", "음성군", "증평군", "진천군", "청원군"];
+            var area11 = ["계룡시", "공주시", "논산시", "보령시", "서산시", "아산시", "천안시", "금산군", "당진군", "부여군", "서천군", "연기군", "예산군", "청양군", "태안군", "홍성군"];
+            var area12 = ["군산시", "김제시", "남원시", "익산시", "전주시", "정읍시", "고창군", "무주군", "부안군", "순창군", "완주군", "임실군", "장수군", "진안군"];
+            var area13 = ["광양시", "나주시", "목포시", "순천시", "여수시", "강진군", "고흥군", "곡성군", "구례군", "담양군", "무안군", "보성군", "신안군", "영광군", "영암군", "완도군", "장성군", "장흥군", "진도군", "함평군", "해남군", "화순군"];
+            var area14 = ["경산시", "경주시", "구미시", "김천시", "문경시", "상주시", "안동시", "영주시", "영천시", "포항시", "고령군", "군위군", "봉화군", "성주군", "영덕군", "영양군", "예천군", "울릉군", "울진군", "의성군", "청도군", "청송군", "칠곡군"];
+            var area15 = ["거제시", "김해시", "마산시", "밀양시", "사천시", "양산시", "진주시", "진해시", "창원시", "통영시", "거창군", "고성군", "남해군", "산청군", "의령군", "창녕군", "하동군", "함안군", "함양군", "합천군"];
+            var area16 = ["서귀포시", "제주시", "남제주군", "북제주군"];
+
+
+
+            // 시/도 선택 박스 초기화
+
+            $("select[name^=sido]").each(function () {
+                $selsido = $(this);
+                $.each(eval(area0), function () {
+                    $selsido.append("<option value='" + this + "'>" + this + "</option>");
+                });
+                $selsido.next().append("<option value=''>구/군 선택</option>");
+            });
+
+
+
+            // 시/도 선택시 구/군 설정
+
+            $("select[name^=sido]").change(function () {
+                var area = "area" + $("option", $(this)).index($("option:selected", $(this))); // 선택지역의 구군 Array
+                var $gugun = $(this).next(); // 선택영역 군구 객체
+                $("option", $gugun).remove(); // 구군 초기화
+
+                if (area == "area0")
+                    $gugun.append("<option value=''>구/군 선택</option>");
+                else {
+                    $.each(eval(area), function () {
+                        $gugun.append("<option value='" + this + "'>" + this + "</option>");
+
+                        $("select[name^=gugun]").change(function () {
+
+                            $("input[name=LectureLocation]").val($("#sido1").val() + " " + $("#gugun1").val());
+
+                            $("input[name=LectureLocation]").text($("#sido1").val() + " " + $("#gugun1").val());
+
+                        });
+                    });
+                }
+            });
+
+
+
+        });
+
+
+    </script>
+
+    <br>
+
+    <select name="sido1" id="sido1"></select>
+    <select name="gugun1" id="gugun1"></select>
+            @Html.EditorFor(model => model.LectureLocation, new { Id = "LectureLocation", htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.LectureLocation, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <input type="radio" name="lectureplaceradio" value="1" id="a" onchange="Foo();">협의 후 결정
+    <input type="radio" name="lectureplaceradio" value="2" id="b" onchange="Foo();">직접 작성
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        function Foo() {
+
+            var lectureplaceradio = $('input:radio[name="lectureplaceradio"]:checked').val();
+
+            if (lectureplaceradio == '1') {
+                $("input[name=LecturePlace]").val("협의 후 결정");
+                $("input[name=LecturePlace]").text("협의 후 결정");
+
+                $("input[name=LecturePlace]").attr("readonly", true);
+            }
+            if (lectureplaceradio == '2') {
+                $("input[name=LecturePlace]").attr("readonly", false);
+                $("input[name=LecturePlace]").val("");
+                $("input[name=LecturePlace]").text("");
+            }
+        }
+
+        function myFunction() {
+            $("#b").attr("checked", false);
+            $("#b").attr("checked", true);
+            $("b").is(":checked");
+        }
+
+    </script>
+
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.LecturePlace, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LecturePlace, new { Id = "LecturePlace", htmlAttributes = new { @class = "form-control", onfocus = "javascript:myFunction()" } })
+            @Html.ValidationMessageFor(model => model.LecturePlace, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        var numbers = new Array();
+    var numbers2 = new Array();
+
+
+
+
+        function Textplus() {
+
+            StringPlus();
+
+            clearInputs();
+    }
+
+
+    function StringPlus() {
+
+        if ($("select[name=startHour]").val() != "")
+            var sVal = $("select[name=startHour]").val(); // 2시 -> 2
+
+        if ($('#Hournumber').val() != null)
+            var sVal2 = $('#Hournumber').val();
+
+        var sVal3 = parseInt(sVal) + parseInt(sVal2);
+
+        if (sVal3 >= 24) {
+            sVal3 = sVal3 - 24;
+        }
+
+        var scheduleViewA = $("select[name=yoil]").val() + ":" + $("select[name=startHour]").val() + " ~ " + sVal3 + "시";
+
+        numbers.push(scheduleViewA);
+
+        var str = "";
+        for (var i = 0; i < numbers.length; i++) {
+            str += numbers[i] + " ";
+        }
+
+
+
+
+        $('#viewlabel').text(str);
+
+    }
+
+    function clickLabel() {
+
+        $('#viewlabel').text("");
+        numbers.length = 0;
+    }
+
+
+        function clearInputs() {
+            $("select[name=yoil]").val("");
+            $("select[name=startHour]").val("");
+            $("#Hournumber").val("");
+        }
+
+
+    function SchedulePlus() {
+        var str2 = $('#viewlabel').text();
+
+            numbers2.push(str2);
+
+            var str3 = "";
+            for (var i = 0; i < numbers2.length; i++) {
+                str3 += numbers2[i] + ",";
+            }
+
+            $("input[name=ScheduleTime]").text(str3);
+            
+            $("input[name=ScheduleTime]").val(str3);
+
+            numbers.length = 0;
+              $('#viewlabel').text("");
+        }
+    </script>
+    <div id="viewDiv">
+        <label id="viewlabel" onclick="clickLabel();"></label>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">요일</label>
+        <div class="col-md-10">
+
+            <select name="yoil" id="yoil">
+                <option value="">요일선택</option>
+                <option value="월요일">월요일</option>
+                <option value="화요일">화요일</option>
+                <option value="수요일">수요일</option>
+                <option value="목요일">목요일</option>
+                <option value="금요일">금요일</option>
+                <option value="토요일">토요일</option>
+                <option value="일요일">일요일</option>
+            </select>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="form-group"> 
+        @Html.LabelFor(model => model.ScheduleTime, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        <script type="text/javascript">
+
+            function setStartHour() {
+
+                $("input[name=ScheduleTime]").text($("select[name=start]").val());
+
+                $("input[name=ScheduleTime]").val($("select[name=start]").val());
+            }
+
+            /**/</script>
+
+        <select name="startHour" id="startHour">
+            <option value="">시작시간선택</option>
+            <option value="0시">0시</option>
+            <option value="1시">1시</option>
+            <option value="2시">2시</option>
+            <option value="3시">3시</option>
+            <option value="4시">4시</option>
+            <option value="5시">5시</option>
+            <option value="6시">6시</option>
+            <option value="7시">7시</option>
+            <option value="8시">8시</option>
+            <option value="9시">9시</option>
+            <option value="10시">10시</option>
+            <option value="11시">11시</option>
+            <option value="12시">12시</option>
+            <option value="13시">13시</option>
+            <option value="14시">14시</option>
+            <option value="15시">15시</option>
+            <option value="16시">16시</option>
+            <option value="17시">17시</option>
+            <option value="18시">18시</option>
+            <option value="19시">19시</option>
+            <option value="20시">20시</option>
+            <option value="21시">21시</option>
+            <option value="22시">22시</option>
+            <option value="23시">23시</option>>
+        </select>
+
+        @Html.EditorFor(model => model.ScheduleTime, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.ScheduleTime, "", new { @class = "text-danger" })
+    </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-md-2">강의 시간</label>
+        <div class="col-md-10">
+
+            <input type="number" class="form-control" id="Hournumber" onfocusout="Textplus();" />
+        </div>
+    </div>
+
+    <div class="col-md-offset-2 col-md-10">
+        <input type="button" value="Plus" onclick="SchedulePlus();" class="btn btn-default" />
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(model => model.MemberID, "MemberID", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+            <script type="text/javascript">
+                 $(document).ready(function () {
+                      $("input[name=MemberID]").val(@ViewBag.MemberID);
+                      $("input[name=MemberID]").text(@ViewBag.MemberID);
+                       $("input[name=MemberID]").attr("readonly", true);
+                    });
+            </script>
+            @Html.EditorFor(model => model.MemberID, new { Id = "MemberID", htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MemberID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
 }
 
 <div>

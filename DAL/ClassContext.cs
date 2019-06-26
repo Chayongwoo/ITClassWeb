@@ -19,7 +19,6 @@ namespace ITClassWeb.DAL
         public DbSet<License> Licenses { get; set; }
         public DbSet<Lecture> Lectures { get; set; }
         public DbSet<Review> Reviews { get; set; }
-        public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Application> Applications { get; set; }
         public DbSet<ApplySchedule> ApplySchedules { get; set;}
 

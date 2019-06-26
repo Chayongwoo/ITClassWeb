@@ -99,6 +99,7 @@ namespace ITClassWeb.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MemberID,MemberName,MemberEmail,MemberPassword,ConfirmPassword,MemberPhone,MemberType,TutorImage,ImageMimeType,TutorPortfolio,TutorGit")] Member member)
         {
+
             if (ModelState.IsValid)
             {
                 db.Entry(member).State = EntityState.Modified;
@@ -181,6 +182,7 @@ namespace ITClassWeb.Controllers
 
         public ActionResult TutorRegister()
         {
+
             if (Session["MemberID"] == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -190,6 +192,9 @@ namespace ITClassWeb.Controllers
             {
                 return HttpNotFound();
             }
+
+            member.ConfirmPassword = member.MemberPassword;
+
             return View(member);
         }
 
@@ -197,7 +202,8 @@ namespace ITClassWeb.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult TutorRegister([Bind(Include = "MemberID,MemberName,MemberEmail,MemberPassword,ConfirmPassword,MemberPhone,MemberType,TutorImage,ImageMimeType,TutorPortfolio,TutorGit")] Member member, HttpPostedFileBase image = null)
         {
-            MessageBox.Show(member.TutorImage.ToString());
+            MessageBox.Show(member.ConfirmPassword);
+
             if (ModelState.IsValid)
             {
                 if (image != null)

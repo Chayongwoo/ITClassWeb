@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.LectureID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Member.MemberName)
         </th>
         <th>
@@ -21,8 +24,9 @@
             @Html.DisplayNameFor(model => model.LectureLanguage)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LectureImage)
+            @Html.DisplayNameFor(model => model.LectureImageName)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.TutorIntroduce)
         </th>
@@ -53,59 +57,68 @@
         <th>
             @Html.DisplayNameFor(model => model.LecturePlace)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduleTime)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Member.MemberName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LectureTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LectureLanguage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LectureImage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TutorIntroduce)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LectureIntroduce)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LecturePeople)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LecturePlan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LectureCount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LecturePrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LectureMaxperson)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LectureApplyDeadline)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LectureLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LecturePlace)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.LectureID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.LectureID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.LectureID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Member.MemberName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureTitle)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureLanguage)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureImageName)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.TutorIntroduce)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureIntroduce)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LecturePeople)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LecturePlan)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureCount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LecturePrice)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureMaxperson)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureApplyDeadline)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureLocation)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LecturePlace)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ScheduleTime)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.LectureID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.LectureID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.LectureID })
+    </td>
+</tr>
 }
 
 </table>

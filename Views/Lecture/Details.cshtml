@@ -35,11 +35,13 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LectureImage)
+            @Html.DisplayNameFor(model => model.LectureImageName)
+            <img class="img=thumbnail" width="150" height="150"
+                 src="@Url.Action("GetImage", "Lecture", new {Model.LectureID})" />
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.LectureImage)
+            @Html.DisplayFor(model => model.LectureImageName)
         </dd>
 
         <dt>
@@ -121,7 +123,13 @@
         <dd>
             @Html.DisplayFor(model => model.LecturePlace)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleTime)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleTime)
+        </dd>
     </dl>
 </div>
 <p>
