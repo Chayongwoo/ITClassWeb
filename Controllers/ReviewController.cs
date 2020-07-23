@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Windows;
 using ITClassWeb.DAL;
 using ITClassWeb.Models;
 
@@ -109,6 +110,42 @@ namespace ITClassWeb.Controllers
             }
             return View(review);
         }
+
+        public ActionResult ReviewInsert()
+        {
+
+            return View();
+        }
+
+        public ActionResult LectureReviewList()
+        {
+
+            var reviewlist = db.Reviews.Include(r => r.Lecture);
+
+            if (reviewlist == null)
+            {
+                return HttpNotFound();
+            }
+            return View(reviewlist.ToList());
+        }
+
+        [ChildActionOnly]
+        public ActionResult ShowLectureReview()
+        {;
+            return PartialView("LectureReviewList");
+
+        }
+
+        [ChildActionOnly]
+        public ActionResult ShowReviewInsert()
+        {
+            return PartialView("ReviewInsert");
+        }
+
+
+
+
+
 
         // POST: Review/Delete/5
         [HttpPost, ActionName("Delete")]

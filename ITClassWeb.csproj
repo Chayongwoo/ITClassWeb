@@ -571,6 +571,10 @@
     <Content Include="Views\Lecture\LectureBoardList.cshtml" />
     <Content Include="Views\Lecture\CreateView.cshtml" />
     <Content Include="Views\Lecture\View33.cshtml" />
+    <Content Include="Views\Lecture\LectureEdit.cshtml" />
+    <Content Include="Views\Review\ReviewInsert.cshtml" />
+    <Content Include="Views\Review\LectureReviewList.cshtml" />
+    <Content Include="Views\Lecture\connect.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />

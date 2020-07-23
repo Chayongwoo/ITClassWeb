@@ -31,10 +31,15 @@ namespace ITClassWeb.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Lecture lecture = db.Lectures.Find(id);
+
+
             if (lecture == null)
             {
                 return HttpNotFound();
             }
+
+            ViewBag.LectureID = lecture.LectureID;
+
             return View(lecture);
         }
 
@@ -87,27 +92,34 @@ namespace ITClassWeb.Controllers
 
                 if (image != null)
                 {
+                    string pic = System.IO.Path.GetFileName(image.FileName);
+                    string path = System.IO.Path.Combine(
+                                           Server.MapPath("~/Images/"), pic);
+                    image.SaveAs(path);
+
+
                     lecture.LectureImageName = image.FileName; // 파일명
                     lecture.LectureImageType = image.ContentType;
-                    if(lecture.LectureImage != null)
-                    {
+                   
                     lecture.LectureImage = new byte[image.ContentLength];
-                    }
-                    else
-                    {
-                        MessageBox.Show("파일을 업로드 해주세요.");
-                        return View();
-                    }
+                    
 
                     image.InputStream.Read(lecture.LectureImage, 0, image.ContentLength);
-                }
-                
-                db.Lectures.Add(lecture);
-                db.SaveChanges();
 
-                Session["LectureID"] = lecture.LectureID;
+                }
+
+                    db.Lectures.Add(lecture);
+                    db.SaveChanges();
+
+
+                var max = db.Lectures.OrderByDescending(p => p.LectureID).FirstOrDefault().LectureID;
+
+
+                Session["LectureID"] = max.ToString();
+                   
 
                 return RedirectToAction("Index");
+                 
             }
 
             return View();
@@ -132,31 +144,66 @@ namespace ITClassWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Lecture lecture = db.Lectures.Find(id);
+
+            lecture.ScheduleTime = "";
+
+
             if (lecture == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.MemberID = new SelectList(db.Members, "MemberID", "MemberName", lecture.MemberID);
-            return View(lecture);
+            
+            if(lecture.MemberID == (int)Session["MemberID"])
+            {
+
+                return View(lecture);
+            }
+            else
+            {
+                MessageBox.Show("해당 글의 작성자만 수정이 가능합니다.");
+                return View();
+            }
         }
+
 
         // POST: Lecture/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LectureID,LectureTitle,LectureLanguage,LectureImage,TutorIntroduce,LectureIntroduce,LecturePeople,LecturePlan,LectureCount,LecturePrice,LectureMaxperson,LectureApplyDeadline,LectureLocation,LecturePlace,MemberID")] Lecture lecture)
+        public ActionResult Edit([Bind(Include = "LectureID,LectureTitle,LectureLanguage,LectureImage,LectureImageName,LectureImageType,TutorIntroduce,LectureIntroduce,LecturePeople,LecturePlan,LectureCount,LecturePrice,LectureMaxperson,LectureApplyDeadline,LectureLocation,LecturePlace,ScheduleTime,MemberID")] Lecture lecture, HttpPostedFileBase image = null)
         {
             if (ModelState.IsValid)
             {
+                if (image != null)
+                {
+                    string pic = System.IO.Path.GetFileName(image.FileName);
+                    string path = System.IO.Path.Combine(
+                                           Server.MapPath("~/Images/"), pic);
+
+                    image.SaveAs(path);
+                    lecture.LectureImageName = image.FileName; // 파일명
+                    lecture.LectureImageType = image.ContentType;
+
+                    lecture.LectureImage = new byte[image.ContentLength];
+
+
+                    image.InputStream.Read(lecture.LectureImage, 0, image.ContentLength);
+
+                }
                 db.Entry(lecture).State = EntityState.Modified;
+
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
-            ViewBag.MemberID = new SelectList(db.Members, "MemberID", "MemberName", lecture.MemberID);
+
+          
             return View(lecture);
         }
+
 
         // GET: Lecture/Delete/5
         public ActionResult Delete(int? id)
@@ -173,6 +220,10 @@ namespace ITClassWeb.Controllers
             return View(lecture);
         }
 
+
+
+
+
         // POST: Lecture/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -183,6 +234,12 @@ namespace ITClassWeb.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+      
+
+
+
 
         protected override void Dispose(bool disposing)
         {

@@ -5,7 +5,6 @@
 }
 
 <h2>Details</h2>
-
 <div>
     <h4>Lecture</h4>
     <hr />
@@ -37,7 +36,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.LectureImageName)
             <img class="img=thumbnail" width="150" height="150"
-                 src="@Url.Action("GetImage", "Lecture", new {Model.LectureID})" />
+                 src="@Url.Action("GetImage", "Lecture", new { Model.LectureID })" />
         </dt>
 
         <dd>
@@ -132,7 +131,14 @@
         </dd>
     </dl>
 </div>
-<p>
+
+<div>
+   @Html.Action("ShowReviewInsert","review", new { id = @ViewBag.LectureID })
+</div>
+
+
+
+<p> 
     @Html.ActionLink("Edit", "Edit", new { id = Model.LectureID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
